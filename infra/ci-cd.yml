@@ -1,0 +1,25 @@
+name: CI/CD
+on:
+  push:
+    branches: [ main, master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build frontend
+        working-directory: ./frontend
+        run: |
+          npm ci
+          npm run build
+      - name: Build backend package
+        working-directory: ./server
+        run: |
+          npm ci
+      - name: Build docker images (example)
+        run: |
+          echo "Add steps to build and push to your registry (DockerHub/GCR/ACR)"

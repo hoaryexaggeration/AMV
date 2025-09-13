@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: amv-backend
+    env: node
+    repo: <YOUR_GITHUB_REPO_URL>
+    branch: main
+    plan: starter
+    buildCommand: cd server && npm ci
+    startCommand: cd server && npm start
+    instanceType: starter
+    envVars:
+      - key: MONGO_URI
+      - key: JWT_SECRET
+      - key: STRIPE_SECRET_KEY
+      - key: AWS_REGION
+      - key: AWS_ACCESS_KEY_ID
+      - key: AWS_SECRET_ACCESS_KEY
+      - key: S3_BUCKET
