@@ -9,7 +9,7 @@ export default function WhyChooseUs() {
           <p className="mt-2">Approval success rate</p>
         </div>
         <div>
-          <h3 className="text-5xl font-bold">10+ Years</h3>
+          <h3 className="text-5xl font-bold">3+ Years</h3>
           <p className="mt-2">Professional experience</p>
         </div>
         <div>
