@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+/**import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 
 import Home from "./pages/Home";
@@ -22,3 +22,28 @@ function App() {
 }
 
 export default App;
+**/
+
+
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./LandingPage";
+import ServicesPage from "./pages/ServicesPage";
+import Layout from "./Layout";
+function App() {
+  return (
+    <Layout>
+     <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+      </Routes>
+     </Layout> 
+  );
+}
+
+export default App;
+
+
+
+
+
+
